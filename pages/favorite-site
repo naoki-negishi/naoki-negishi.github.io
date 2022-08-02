@@ -6,7 +6,7 @@
     <title>インターネット目録(仮)</title>
 </head>
 
-<body background="gazou/haikei.gif" oncontextmenu="alert('右クリックは禁止です！');return false">
+<body background="../gazou/haikei.gif" oncontextmenu="alert('右クリックは禁止です！');return false">
     <center>
         <h1>インターネット目録(仮)</h1>
         <h3>こちらは個人的なお気に入りのサイトのリンク集です</h3>

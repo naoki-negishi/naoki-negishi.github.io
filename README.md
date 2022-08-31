@@ -1,2 +1,2 @@
 # naoki-negishi.github.io
-my HomePage
+Hi, I'm Naoki Negishi.

@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device‐width, initial‐scale=1.0">
-    <title>お気に入り情報</title>
+    <title>お気に入り音楽情報</title>
     <link rel="icon" href="/gazou/ariete.jpg">
 </head>
 
 <body background="../gazou/haikei.gif" oncontextmenu="alert('右クリックは禁止です！');return false">
-    <center>
-        <h1>お気に入り音楽</h1>
-        <h3>こちらは個人的なお気に入りの音楽を紹介するページです</h3>
-    </center>
-
-    <hr>
-
-    <article id="4b5e9781-ed21-4040-a7f6-6faabadac038" class="page sans">
-        <header>
+    <header id="header">
+        <center>
+            <h1>お気に入り音楽</h1>
+            <h3>こちらは個人的なお気に入りの音楽を紹介するページです</h3>
+        </center>
+        <hr>
+        <nav id=links>
             <h1>ページ内リンク</h1>
             <ul>
                 <li><a href="#vocaloid">Vocaloid</a></li>
                 <li><a href="#category2">Category 2</a></li>
                 <li><a href="#others">その他</a></li>
             </ul>
-        </header>
-
-        <a href="index.html">トップに戻る Go to top page</a>
-        <hr>
-
-        <div class="page-body">
-            <h3 id="vocaloid">Vocaloid</h3>
+            <a href="https://naoki-negishi.github.io/top/">トップに戻る Go to top page</a>
+        </nav>
+    </header>
+    <hr>
+    <main id=musics>
+        <section id="vocaloid">
+            <h3>Vocaloid</h3>
             <ul><dl>
                 <li><dt><a href="https://www.nicovideo.jp/watch/sm39257413">
                         <strong>きゅうくらりん / いよわ feat.可不</strong></a></dt>
@@ -96,8 +94,10 @@
                 <!--         <strong></strong></a></dt> -->
                 <!--     <dd></dd></li> -->
             </dl></ul>
+        </section>
 
-            <h3 id="category2">Category 2</h3>
+        <section id="category2">
+            <h3>Category 2</h3>
             <ul><dl>
                 <li><dt><a href="https://example.html">
                         <strong>Example Page Title</strong></a></dt>
@@ -109,8 +109,10 @@
                         <strong></strong></a></dt>
                     <dd></dd></li>
             </dl></ul>
+        </section>
 
-            <h3 id="others">その他</h3>
+        <section id="others">
+            <h3>その他</h3>
             <ul><dl>
                 <li><dt><a href="https://example.html">
                         <strong></strong></a></dt>
@@ -122,14 +124,14 @@
                         <strong></strong></a></dt>
                     <dd></dd></li>
             </dl></ul>
-
-        </div>
-    </article>
-
+        </section>
+    </main>
     <hr>
-
-    何か問題がございましたらご連絡ください。すぐに対応いたします。<br>
-    <a href="https://naoki-negishi.github.io/top/">トップに戻る Go to top page</a>
+    <footer id="footer">
+        何か問題がございましたらご連絡ください。すぐに対応いたします。<br>
+        © 2021 Naoki Negishi<br>
+        <a href="https://naoki-negishi.github.io/top/">トップに戻る Go to top page</a>
+    </footer>
 </body>
 
 </html>

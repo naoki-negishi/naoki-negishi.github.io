@@ -1,0 +1,43 @@
+body {
+	color: #000000;
+	background-color: #ffffff;
+	text-align: left;
+	margin-top: 25pt;
+	margin-bottom: 20pt;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+div.header {
+	margin-bottom: 45pt;
+}
+div.footer {
+	text-align: right;
+	font-size: smaller;
+	margin-top: 65pt;
+	margin-bottom: 10pt;
+}
+/* h1 { */
+/* 	color: #000000; */
+/* 	background-color: #d8d088; */
+/* 	font-size: 11pt; */
+/* 	width: 100%; */
+/* 	padding-top: 1pt; */
+/* 	padding-bottom: 1pt; */
+/* 	padding-left: 11pt; */
+/* 	margin-top: 25pt; */
+/* 	margin-bottom: 20pt; */
+/* } */
+p {
+	font-size: 11pt;
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
+form {
+	font-size: 11pt;
+}
+/* a:link { */
+/* 	color: #4658d7; */
+/* } */
+/* a:visited { */
+/* 	color: #40b94b; */
+/* } */

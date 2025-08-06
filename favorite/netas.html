@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>NEVER KNOWS BEST</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c931f01e-448e-4401-98a3-942d5227c5de" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_5.png" style="object-position:center 10.38%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">✒️</span></div><h1 class="page-title">NEVER KNOWS BEST</h1><p class="page-description"></p></header><div class="page-body"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">文学・映画</summary><div class="indented"><ul id="5ab1198b-0839-4426-b8aa-20aace4f9388" class="bulleted-list"><li style="list-style-type:disc">水素より透き通った</li></ul><ul id="d49e5259-c65c-42ab-b613-c5702a529be1" class="bulleted-list"><li style="list-style-type:disc">わたしたちは、氷砂糖をほしいくらゐもたないでも、きれいにすきとほつた風をたべ、桃いろのうつくしい朝の日光をのむことができます。</li></ul><ul id="cc8dea6c-697b-490c-a1ee-224d3d9b76f2" class="bulleted-list"><li style="list-style-type:disc">水銀いろ</li></ul><ul id="33e12577-c836-40ee-8076-b3ee6372598d" class="bulleted-list"><li style="list-style-type:disc">ほおずきのような</li></ul><ul id="7ffdee40-643f-4e4d-934e-1ed0cc9c38c2" class="bulleted-list"><li style="list-style-type:disc">世界をのぞむ家</li></ul><ul id="f85122b4-eb65-426f-817e-7a93015b36d8" class="bulleted-list"><li style="list-style-type:disc">雪を欺く白髪</li></ul><ul id="73743cc7-0d8d-4957-8939-f77c6419b3ed" class="bulleted-list"><li style="list-style-type:disc">軍艦が一隻浮かぶほど</li></ul><ul id="b78f7b98-dc9f-471a-aeec-ca324de18e0e" class="bulleted-list"><li style="list-style-type:disc">バターのように滑らかな肌</li></ul><ul id="c3bffd32-e805-41ac-9a39-c462b5d7227a" class="bulleted-list"><li style="list-style-type:disc">まるで紀元前から続いているような</li></ul><ul id="faa41325-d0a2-4573-ba3f-c030473975c1" class="bulleted-list"><li style="list-style-type:disc">アナーキー・イン・ザ・1K</li></ul><ul id="b37fdbd4-f8af-43e1-83ee-de3ef94caca4" class="bulleted-list"><li style="list-style-type:disc">貨幣とは鋳造された自由である（ドストエフスキー）</li></ul><ul id="4ae9ecaa-b0c4-41d8-ac81-a3f0344d92d6" class="bulleted-list"><li style="list-style-type:disc">人はパンのみにて生きるにあらず</li></ul><ul id="0447975a-d519-425d-a2b3-730e640b1dbd" class="bulleted-list"><li style="list-style-type:disc">世の中に寝るより楽はなかりけり 浮世の馬鹿は起きて働く『太田蜀山人, 狂歌』</li></ul><ul id="47bb9400-dc6c-4dfe-864e-8bd5c5a36dc2" class="bulleted-list"><li style="list-style-type:disc">世の中に寝る程楽は無きものを知らぬうつけが起きて働く『狂言 杭か人か』</li></ul><ul id="bffb5f94-f82c-46d6-aaa1-1c26fcbaf76c" class="bulleted-list"><li style="list-style-type:disc">寝るは楽起きて地獄の夢を見る寝続けにするこれぞ極楽『春波楼筆記』</li></ul><ul id="10b604a1-a585-49f0-9ea6-f31eab0c3954" class="bulleted-list"><li style="list-style-type:disc">必要なのは知識ではなく思いやりである。思いやりがなければ最後に残るのは暴力である。『独裁者』</li></ul><ul id="41981651-65d0-4837-9a7d-217d1acf1ca2" class="bulleted-list"><li style="list-style-type:disc">大気のひろがりと大空に身をひたしていると、人間の唯一の務めとは、生きることであり、幸福になることであることだ、という気がしてくるのだった。</li></ul><ul id="d349a6df-47dd-4c2b-9383-bd00c123eea7" class="bulleted-list"><li style="list-style-type:disc">『絵画とは、それぞれの表現に応じて大きくなり小さくなっていく表面と事物の関係の明示にほかならない』ピエロ・デラ・フランチェスカ</li></ul><ul id="909f0b8f-28cd-4938-a63e-9a6c144d9e00" class="bulleted-list"><li style="list-style-type:disc">カントは、人間的認識の成立条件として、形式、即ち、〈感性的直観の形式（時間・空間）と悟性の論理的形式（概念・カテゴリ）〉と、内容・実質（感覚内容）の両者を要求し、「内容なき思考は空虚であり、 概念なき直観は盲目である」（KrV, B75）と主張した。</li></ul><ul id="f75633f3-1241-432f-902d-53d740e22f83" class="bulleted-list"><li style="list-style-type:disc">大学の寄生虫学教室へ論文－－寄生虫殊に蛔虫卵に於ける湿熱及び調味料に対する抵抗に就いてといふ論文の確定実験に初めて行つた時、彼女は帰りの出口を見失つて、地階から地下室への階段を半ば下りかけた。 「そつちへ行つてもなんにもありませんよ」 幽市【ネクロポリス】から吹いてくる黴びた氈【かも】のやうな臭が天井に木霊して、嗄れ声を堕してきた。 「屍体室ですよ……」 ＊ この話をして呉れたお嬢さんは、「大学ってそんなところよ」といつて、悲しげに笑つた。 （安西冬衛「迷宮」『日本の詩歌 25 北原冬彦･安西冬衛･北園克衛･春山行夫』 中央公論社 1969.11）</li></ul><ul id="50a177c5-576f-40e6-af89-d316e4a29ebb" class="bulleted-list"><li style="list-style-type:disc">Life imitates art far more than art imitates life. Oscar Wild</li></ul><ul id="c26c6511-07ec-4b0b-9916-0228c68442c6" class="bulleted-list"><li style="list-style-type:disc">脳の中でこそ、芥子の花は赤く、林檎は香ばしく、雲雀は歌う。 オスカー・ワイルド</li></ul><ul id="15678d26-e446-80de-a42a-d00ee64d88c4" class="bulleted-list"><li style="list-style-type:disc">「一生のどんな時期も心労の時期であり、誰にとっても自分自身が生きている時代は不快なものである」　アウソニウス</li></ul><ul id="a49b6188-9723-4503-bfb8-52c613e4184c" class="bulleted-list"><li style="list-style-type:disc">ああ、青春よ、青春よ。お前の魅力は全てを成し得る所にあるのではなく、全てを成し得ると思わせる所にあるのか…。青春の日々に、自分は何を望み、何を期待しただろう。そして期待したものの、何が得られたというのだろう…。だが人生の斜陽にさしかかった今、あの日々の記憶以上のものが何かあっただろうか？ 『初恋』</li></ul><ul id="414e8195-f316-42bb-bfbd-ca0de0e166db" class="bulleted-list"><li style="list-style-type:disc">ただ驚いていた。読むことができない！それは、素晴らしい欠落に思えたー殉教者や聖人が、痛みを感じることができないように。 『荊の城』</li></ul><ul id="d7bded04-753e-447b-b5ca-693cb74e6614" class="bulleted-list"><li style="list-style-type:disc">人間的な愛情の裏打ちのない知能や教育なんて何の値打ちもない　『アルジャーノンに花束を』</li></ul><ul id="ee188568-5e61-4a11-8b85-24cfa64ab5d6" class="bulleted-list"><li style="list-style-type:disc">愛情を与えたり受け入れたりする能力がなければ、知能というものは精神的道徳的な崩壊をもたらし、神経症ないし精神病すら引き起こすものである。つまりですねえ、自己中心的な目的でそれ自体に吸収されてそれ自体に関与するだけの心、人間関係の排除へと向かう心というものは、暴力と苦痛にしかつながらないということ。　『アルジャーノンに花束を』</li></ul><ul id="706afda6-1ef0-4228-986d-88caa281bdc7" class="bulleted-list"><li style="list-style-type:disc">イエス言ひ給ふ 『我は復活（よみがへり）なり、生命（いのち）なり、我を信ずる者は死ぬとも生きん。凡そ生きて我を信ずる者は、永遠（とこしへ）に死なざるべし、汝これを信ずるか』　ヨハネ１１：２５</li></ul><ul id="cc6c5647-9762-4d95-9e04-57dbf31c0d64" class="bulleted-list"><li style="list-style-type:disc">風さそう 花よりもなお 我はまた 春の名残を 如何にとかせん（大石内蔵助 辞世の句）</li></ul><ul id="e2e58480-18c3-4c7e-94da-437782e2424d" class="bulleted-list"><li style="list-style-type:disc">Because School sucks and people change, and those are the rules. (Wonder, via)</li></ul><ul id="04962845-2a60-4f0e-8fb7-c16d3fc48e4d" class="bulleted-list"><li style="list-style-type:disc">でもとにかくさ、だだっぴろいライ麦畑みたいなところで、小さな子ども達がいっぱい集まって何かのゲームをしているところを、僕はいつも思い浮かべちまうんだ。何千人もの子どもたちがいるんだけれど、他には誰もいない。つまりちゃんとした大人みたいなのは一人もいないんだよ。僕のほかにはね。それで僕はそのへんのクレイジーな崖っぷちに立っているわけさ。で、僕がそこで何をするかっていうとさ、誰かがその崖から落ちそうになる子どもがいると、かたっぱしからつかまえるんだよ。つまりさ、よく前を見ないで崖の方に走っていく子どもなんかがいたら、どっからともなく現れて、その子をさっとキャッチするんだ。そういうのを朝から晩までずっとやっている。ライ麦畑のキャッチャー、僕はただそういうものになりたいんだ。たしかにかなりへんてこだとは思うけど、僕が心からなりたいと思うのはそれくらいだよ。かなりへんてこだとはわかっているんだけどね。」村上春樹訳『キャッチャー・イン・ザ・ライ』</li></ul><ul id="1b404dc1-ed7a-42f9-8fc8-7eef332b1a66" class="bulleted-list"><li style="list-style-type:disc">レヴィ＝ストロースは要するに「みんな仲良くしようね」と言っており、バルトは「ことばづかいで人は決まる」と言っており、ラカンは「大人になれよ」と言っており、フーコーは「私はバカが嫌いだ」と言っているのでした。『寝ながら学べる構造主義』</li></ul><ul id="d846ada8-c4d1-4926-b8f1-4edb3fa27f30" class="bulleted-list"><li style="list-style-type:disc">戦争やペストが到来するとき、人間はいつも同じように無防備だった。リュー医師もほかの市民たちと同様に無防備だったのだから、彼のためらいをわかってやらねばならない。また、彼が不安と確信のあいだでひき裂かれていたことも理解する必要がある。戦争が勃発すると、人々はこういう。「長続きはしないだろう、あまりにもばかげたことだから」。たしかに戦争はあまりにばかげたことかもしれない。だが、だからといって長続きしないわけではない。愚行はつねに長びくものであり、人々は自分のことばかり考えなければ、そのことに気づくはずだ。しかし、この点ではオラン市民もほかの人々と同じで、自分のことだけを考えていた。いい換えれば、彼らは人間中心主義者だった。つまり、天災など信じなかったのだ。天災は人間の物差しでは測れない。それゆえ、人間は天災を現実にはありえないものと見なし、やがて消え去る悪夢だと考える。だが、天災はかならずしも消え去らないし、人間のほうが、とくに人間中心主義者のほうが、悪夢からまた悪夢のなかへと消え去っていくのだ。というのも、彼らは用心を怠っていたからだ。『ペスト』</li></ul><ul id="abe1b197-0838-4458-a180-ecadaa9ad0ea" class="bulleted-list"><li style="list-style-type:disc">彼らは自分を自由だと考えていたが、天災があるかぎり、人間はけっして自由になどなれはしないのだ。『ペスト』</li></ul><ul id="7db1d649-dead-42ea-894a-4393d91faa3d" class="bulleted-list"><li style="list-style-type:disc">オラン市民、少なアクトも別離に一番苦しんでいた人々は、この状況に慣れてしまったのだろうか？そうだと答えることは必ずしも正しいとはいえないだろう。むしろ、身体的にも、精神的にも、肉を失って、痩せこけることに苦しんでいた、というほうが正確かもしれない。ペストの流行のはじめのころには、彼らは失った人のことをよく思い出し、悲しんだ。だが愛する人の顔や、笑いや、あとからそれが幸せだったとわかる日々のことをはっきりと思い出せたとしても、今こうしてその人のことを思い出している瞬間、すでに遠く離れた場所で、歯の人が何をしているかを想像することは困難になっていた。要するに、いまこのとき、彼らには記憶はあるが想像力は不十分になっていたのだ。そして、ペストの第二弾会になると、彼らは記憶さえ失っていまうのだ。顔を忘れたわけではないが、結局同じことなのだ。その顔は肉を失って痩せこけてしまい、彼らは自分の心のなかでその顔を見ることができない。そして、最初の数週間は自分の愛に関する事柄の中で、もはや亡霊しか相手にしていないことを嘆いたものだが、その後は、亡霊が肉を失って痩せこけ、思い出が保っていたかすかな色合いさえもが失われたことに気づくのだ。この長い別離の時間の果には、自分たちのものだったあの親しみ深さをもう想像することができず、いつでも方に手を置くことができたひとが自分のそばでどんなふうに生きていたかも思い出せなくなっていた。『ペスト』</li></ul><ul id="c2fbb57b-76c4-4abf-8f50-f7ca097af71e" class="bulleted-list"><li style="list-style-type:disc">市民たちは足並みをそろえて、天災にいわば適応していった。というのも、それ以外にやり方がなかったからだ。当然のことながら、まだ不幸と苦しみに接する態度をとってはいたが、鋭い痛みはもう感じていなかった。しかし、たとえばリュー医師は、それこそがまさに不幸なのだと考えていた。絶望になれることは、絶望そのものより悪いのだ。それ以前は、別離を強いられていた人々も本当には不幸ではなく、その苦しみのなかには、たった今消えたばかりの輝きが残っていた。いまは、街角でも、カフェでも、友人宅でも、彼らは全てに平静で、うわの空で、退屈しきった目をしているようにも見えるので、彼らのせいで、町全体が駅の待合室みたいに思えるのだった。『ペスト』</li></ul><ul id="3bf5b989-e0d7-4c1a-9230-489c605788bc" class="bulleted-list"><li style="list-style-type:disc">記憶もなく、希望もなく、彼らはただ現在の中にはまり込んでいた。げんに、彼らには現在しかなかった。特筆すべきことだが、ペストは彼ら全員から、愛の能力と、友情の能力さえも奪ってしまったのだ。なぜなら、愛はいくらかの未来への期待を必要とするものだからだ。しかし、私達にはもはやその瞬間その瞬間しか存在していなかった。『ペスト』</li></ul><ul id="c88dee9f-2083-47ed-9a40-f0177202008d" class="bulleted-list"><li style="list-style-type:disc">ポケットをさぐると、小刀と手巾に包んだカルモチンの瓶とが出て来た。それを谷底めがけて投げ捨てた。別のポケットの煙草が手に触れた。私は煙草を喫んだ。一ト仕事を終えて一服している人がよくそう思うように、生きようと私は思った。『金閣寺』</li></ul><ul id="13d78d26-e446-8013-a8de-ea42473be570" class="bulleted-list"><li style="list-style-type:disc">「今日は何曜日だ？」アウレリャノが火曜日だと答えると、ホセ・アルカディオ・ブエンディアは言った。「わしもそう思っていた。ところが、急に気づいたんだ。今日も、昨日と同じように月曜だということにな。空を見ろ、壁を見ろ、あのベゴニアの花を見ろ。今日もやっぱり月曜日なんだ」。『百年の孤独』</li></ul><ul id="02064825-a0a0-4c14-bd72-ab287c036045" class="bulleted-list"><li style="list-style-type:disc">嘘っぽく嘘っぽく笑うのが好きな女子はおりますよねぇ おりますしさ おいおいこれねぇ・・・嘘っぽく笑ってるつもりが全部見え見えなんやねーこれねーでもそういう女子は嫌いでも好きでもないねぇそんな彼女が透明少女なわけよ（ペニーレーン）</li></ul><ul id="1798f06f-b029-4a59-8ea3-3000e6561b37" class="bulleted-list"><li style="list-style-type:disc">俺には見えるぞ・・・俺には見えるぞ・・・俺には見える すべてが透き通って見える たとえばあの子は 俺が思うに たとえばあの子は透明少女（渋谷）</li></ul><ul id="98b76312-1828-436c-b54c-bf274de893fa" class="bulleted-list"><li style="list-style-type:disc">あるいは そう そうだね 蝦夷の地に ひとりたたずむ江戸から来た女の子がいましてね あの娘って 誰? そう それが例えば 透明少女（RSRFES 1999 in EZO）</li></ul><p id="abf6b8f2-5aef-4f6a-a6e3-6c4f55d1430f" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">アニメ・ゲーム関連</summary><div class="indented"><ul id="21d47524-c994-49f1-ab2a-022d8bfdae40" class="bulleted-list"><li style="list-style-type:disc">意思が希望を生んで、希望が夢を育てて、夢が世界を変える。『月に寄りそう乙女の作法』</li></ul><ul id="2265c748-a805-40c7-be53-aa5be349b759" class="bulleted-list"><li style="list-style-type:disc">空を飛ぶ君たちは、太陽を見上げはするのか？『月に寄りそう乙女の作法』</li></ul><ul id="a6c68881-4e97-46d0-910e-d41283463ebf" class="bulleted-list"><li style="list-style-type:disc">僕は、武器商人と旅をした『ヨルムンガンド』</li></ul><ul id="1ab16ded-85f0-4b25-9401-d5af0db645b3" class="bulleted-list"><li style="list-style-type:disc">それは違う、ヨナ。いまどき聖人だってアサルトライフルで武装し、神の愛を説きながらぶっ放す。『ヨルムンガンド』</li></ul><ul id="adb1ce74-bfba-4ef6-983e-31cb50c7bd1f" class="bulleted-list"><li style="list-style-type:disc">対ショック姿勢！とっくに対ショック！</li></ul><ul id="67420b43-dc25-47b8-8722-10d12354bce5" class="bulleted-list"><li style="list-style-type:disc">6月24日は何の日？ 気分が悪くなったとき、動悸が早くなったりとかは？ 球形プラズマ、蜃気楼、観測気球。あなたが写真に撮るとしたらどれ？ マンテル。チャイルズ＝ウイッティド。その次は？ 気分が悪くなったとき、目の前が真っ白になったり、ちかちかする光が見えたりした？ さっきからずっとあなたの後ろにいるのは誰？ 幻覚や幻聴は？　自分の手の指が七本あるように思えたり、誰かがあなたの臓器を抜き取る相談をしている声が聞こえたりはしなかった？　螺旋アダムスキー脊髄受信体、って言葉に聞き憶えがある気はする？『イリヤの空、UFOの夏』</li></ul><ul id="15145cbd-cad5-4b8a-860b-adf4ad595716" class="bulleted-list"><li style="list-style-type:disc">第三艦橋大破！</li></ul><ul id="88e472d2-5ba5-489a-81f6-f82b5876380e" class="bulleted-list"><li style="list-style-type:disc">武士は食事をしていないとヨウジの値段が高騰してよくない</li></ul><ul id="c7a51361-6368-4258-be8b-96be36c9cf78" class="bulleted-list"><li style="list-style-type:disc">「お姉様、あれを使うわよ」「ええ、よくってよ」『トップをねらえ！』</li></ul><ul id="1758bed7-ea85-4585-b616-3540ab694cac" class="bulleted-list"><li style="list-style-type:disc">しかし、お前には素質がある。だから選んだ。タカヤ、努力をしろ、才能を磨け、他を頼るな。いいか、みずからの全身で感じ、頭で考え、心で判断しろ!宇宙で頼れるのは自分だけだ！『トップをねらえ！』</li></ul><ul id="09a01e47-61cf-40ea-9814-168bf8930a54" class="bulleted-list"><li style="list-style-type:disc">光うさぎを、覚えていますか？『高速回線は光うさぎの夢を見るか』</li></ul><ul id="3e0d266b-d098-4d8e-84a1-8193cc6cd187" class="bulleted-list"><li style="list-style-type:disc">梅雨明けて、すかっと爽やか、スーサイド『NHKにようこそ！』</li></ul><ul id="1d771ad6-04c7-4a1e-9bf0-344a9e9df3c3" class="bulleted-list"><li style="list-style-type:disc">私の家族だって私の遺書が長文ならとばし読みするよ！！『高速回線は光うさぎの夢を見るか』</li></ul><ul id="68b477c4-1466-45f6-ab89-f8cf4ea78674" class="bulleted-list"><li style="list-style-type:disc">誘流メグマ祈呪術</li></ul><ul id="2ab143d1-680e-4aac-93e6-cc9a049f9dff" class="bulleted-list"><li style="list-style-type:disc">「ねえ、大橋君、人生ってなんだと思う？」 「いきなりでかいくくりだなあ。人生？」 「人生よ。あたしはね、人生ってグミ・チョコレート・パインだと思うの」 「グミ・チョコレート・パインだって？」 「そう、ホラ、ジャンケンして、グーだったらグミ、チョキだったらチョコレート、パーだったらパインって、それぞれ言葉の数だけ前に進めるゲームのことよ。人生って……生きることって、あのグミ・チョコ遊びだと思うの。自分の出した手が相手を負かすことがあって、でもその手は必ず一番強いわけじゃなくて、負かした相手の手より弱い手で負けちゃったり。そうそうして勝ったり負けたりしてるうちに、いつの間にかくっきりと勝者と敗者とが分かれてしまうのよ。生きてくって、そういうことなんだと思う」</li></ul><ul id="c36e849c-e2a4-4252-9d66-c93d9b5c433a" class="bulleted-list"><li style="list-style-type:disc">「賢三、結局お前は頭の中でしか世界を知らないんじゃ」「うるさいってんだ。それよりブルマーを返せ」「何も知らぬくせに、映画や本の知識だけが頭の中でふくれあがっている。知識はいらぬプライドを生み、プライドは現実との軋轢を生み、耐えられなくなった少年は内へ内へと閉じていく。内向は何も生まず、そして知ることを恐れるのじゃ」</li></ul><ul id="24ef5708-57d3-4386-bfdc-305fd32ec5c7" class="bulleted-list"><li style="list-style-type:disc">切れた内向型の高校生……しかも文系、ほど危険な存在も他にない。</li></ul><ul id="1d55581b-5c8d-40c8-9636-07380ec50013" class="bulleted-list"><li style="list-style-type:disc">『そもそも、山口美甘子は夢幻だったのだ。俺にもし、人生と呼べるものがあったとしても、山口美甘子という人間は、初めから存在などしていなかったのだ』</li></ul><ul id="82da2296-c739-4b5b-a077-ba9c976671b0" class="bulleted-list"><li style="list-style-type:disc">「ホン・ラガトエー、あなた様の意志のままに、くるいのさとにわがみのはてるまで、くるいのわがみにくるいのめぐまのもゆるまで、ホン・ラガトエー、シイ・セゾ・ミコヨ、ホン・ラガトエーイニミシユニヨシ、イヌシミニユニヨミツ。　ヨーグ　ヨーグ　ヨーグ」</li></ul><ul id="8ef437f9-f1db-4c82-99fa-887bac3fb53b" class="bulleted-list"><li style="list-style-type:disc">僕は、自分を取りまく者達全てに、平等に、憎しみを抱いて暮らしていたのだ。偉いとされている人のパレードを、アホ面下げて、小旗を振って、わずか数秒のために人だかりをつくって、そんな自分を疑わない、悪いとも思っちゃいない、つまらないとも感じていない、恥じることもない、自らの命を絶つ勇気もない。そんな人間達のこの世界が、そしてそんな世界のやはり一員である自分が、僕は憎くてしかたがなかったのだ。いつか、足がもげる程に自転車のペダルをこいで、どこか遠いところへ逃げよう。　逃げた街で、目も口も耳もこわれた人の様に暮らすのだ。　西日しか射さない部屋にこもって、爆弾を作ろう。　世界を燃やしつくし、壊しつくし、逃げまどう子供たちの耳たぶを焼き切り、はむかおうとするサラリーマンのワイシャツのボタンを噴き出す臓物ではじき飛ばし、奥さんの乳房をくり抜いて、義父の口の中へつっ込み、老人をアザラシと交尾させ、顔から無数のキノコが生えた赤子を産み落とさせる。　そんな爆弾を作る日まで、昼も夜もなく、銀ブチのピカピカ光る眼鏡をかけて、一心不乱に作業に没頭しよう。　爆弾ができたら、また自転車のペダルを猛烈にこいで、学校に乗りつける。　フットボールのタッチダウンみたいに、僕の爆弾を、僕の机の上に思いっ切りたたきつけるのだ。　秒読みはわざと十から数える。十秒の間、みんなは僕を遠まきに見つめながら、うわ言みたいに哀願するのだ。「助けてくれ、なぜこんな目にあうのかわからない」</li></ul><ul id="bd9da159-9928-44bc-996e-0a6715afcd39" class="bulleted-list"><li style="list-style-type:disc">『爆弾って何よ？　君にはそんなものつくれないと思うよ』</li></ul><ul id="94ddd726-d272-473e-992a-199c398b0620" class="bulleted-list"><li style="list-style-type:disc">かの澁澤龍彦は言った。「宗教的な修行によって得られる悟りも、薬物によって得られる悟りも、それらは結局のところ、同じ物である」とかなんとか、そのようなことを言った。 　ならば俺は、薬物で悟りを得よう。『NHKにようこそ！』</li></ul><ul id="d4e4d500-5381-4566-89b0-3ea4e829ef56" class="bulleted-list"><li style="list-style-type:disc">見てしまったら、心が動いてしまったら、それはもう俺の世界の一部なんだ。『堕天作戦』</li></ul><ul id="0d76f002-8840-40f8-b070-523aa566db9f" class="bulleted-list"><li style="list-style-type:disc">俺は戦車だ、それ以上は何も聞くな！</li></ul><ul id="2ae78315-48c6-4822-b6d2-409434a588ee" class="bulleted-list"><li style="list-style-type:disc">でもねえ魔女さん，あたしにいわせりゃあんたも変だ あたしが変？そりゃ決まってるわ．だって魔女だし．こいつはまったくややこしい，確かに魔女さん，おっしゃる通り，へんでなけりゃあ魔女じゃない</li></ul><ul id="5dc8ea71-5849-45c0-b05a-854e93722b71" class="bulleted-list"><li style="list-style-type:disc">スパイラルマタイ・アタマリバース</li></ul><ul id="c8a80a41-d0cc-4abc-8791-33382f092ec8" class="bulleted-list"><li style="list-style-type:disc">やっぱり……いい女には、たばこと屋上と……そしてヒラヒラ服だわね……</li></ul><ul id="11578d26-e446-804f-8e43-c14c2588eaf4" class="bulleted-list"><li style="list-style-type:disc">カエサルの物はカエサルに お金は私に (家族計画)</li></ul><ul id="13678d26-e446-803b-af49-cadf6f274742" class="bulleted-list"><li style="list-style-type:disc">数百匹の古代エビと暮らす、ワンダフルライフ</li></ul><ul id="18a78d26-e446-80f0-a050-e69d189ee03a" class="bulleted-list"><li style="list-style-type:disc">白いワニとは何か？<br/>白いワニはある日突然やってくる。<br/>白いワニは音もなく背後にしのびよる。<br/>白いワニはどこまでも追ってくる。 (ストップ!! ひばりくん!)<br/></li></ul><ul id="18e78d26-e446-80e2-97a3-f9181474d857" class="bulleted-list"><li style="list-style-type:disc">ハルヒハルヒシャナの逢坂大河ルイズ・フランソワーズ・ル・ブラン・ド・ラ・ヴァリエール鉄乙女に惣流・アスカ・ラングレー沢近愛理に三千院ナギ翠星石翠星石翠星石の真紅真紅の神楽坂明日菜明日菜の柊かがみの桂ヒナギクの遠坂凛の荻上</li></ul><p id="55f7a7b0-f15a-435a-8018-873ba2702858" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">インターネット</summary><div class="indented"><ul id="fccd46ed-d006-4d43-8577-98b7f93ea7f7" class="bulleted-list"><li style="list-style-type:disc">宇宙は空にある</li></ul><ul id="d6f8a12f-e4f8-4af8-86ba-a6f5d1d1d34b" class="bulleted-list"><li style="list-style-type:disc">舞妓さん・サイコマン</li></ul><ul id="d1028fe2-37fb-4001-9855-673e54eba68f" class="bulleted-list"><li style="list-style-type:disc">本当のつぶやき</li></ul><ul id="7cfe92cf-33f4-4c0a-acf5-2e1fd6ae4604" class="bulleted-list"><li style="list-style-type:disc">床で寝ないで</li></ul><ul id="12f78d26-e446-80ed-9292-fb218af96fcd" class="bulleted-list"><li style="list-style-type:disc">ロボットの都、ウィーン</li></ul><ul id="19678d26-e446-8089-8560-df3a17d4ea61" class="bulleted-list"><li style="list-style-type:disc">家父長制のお酒　男産めサワー</li></ul><ul id="19678d26-e446-80eb-9dee-eec593f18213" class="bulleted-list"><li style="list-style-type:disc">やめろ！<br/>創作論は人を傷つけるためのものじゃねえ！<br/>おれと殺人ムエタイで勝負だ！<br/></li></ul><ul id="13678d26-e446-809e-907d-cf7bb9149737" class="bulleted-list"><li style="list-style-type:disc">何って、言葉を用いた抽象的思考をしただけだが？</li></ul><ul id="e7357da7-3c43-4e20-a6ea-e533936dbdf0" class="bulleted-list"><li style="list-style-type:disc">サンタさんへ　きれいな死を、栄誉ある死をください</li></ul><ul id="3470e74b-759b-4bd8-ad1b-cdf7589ef55a" class="bulleted-list"><li style="list-style-type:disc">この鉄道は日本国民の叡智と努力によって完成された</li></ul><ul id="322aef43-d97c-4cf6-b52e-8ad1da10cb3d" class="bulleted-list"><li style="list-style-type:disc">日本国民である本旅券の所持人を通路故障なく旅行させ、かつ、同人に必要な保護扶助を与えられるよう、関係の諸官に要請する。</li></ul><ul id="e39cfb51-e2fa-45ba-9c37-14eaf4400331" class="bulleted-list"><li style="list-style-type:disc">昭和六十二年三月三十一日二十四時零分現在<br/>国鉄全線で事故発生の報告なし。<br/>日本国有鉄道は、全ての列車運行を無事故で確実に各会社に引き継ぎ、ここに鉄道事業の役割を了える。<br/></li></ul><ul id="c7de01d0-84d6-41ff-9896-08ee85ac5da8" class="bulleted-list"><li style="list-style-type:disc">国立国会図書館は、真理がわれらを自由にするという確信に立つて、憲法の誓約する日本の民主化と世界平和とに寄与することを使命として、ここに設立される。</li></ul><ul id="2ecfb451-92e2-4e62-9775-8bb3ecc5b66b" class="bulleted-list"><li style="list-style-type:disc">角川文庫発刊に際して　角川源義</li></ul><ul id="a47483e4-049b-4a93-8733-3e185843816d" class="bulleted-list"><li style="list-style-type:disc">基本動作の励行と潜在的危険の徹底排除</li></ul><ul id="448af2dd-0e12-40e9-b64f-af7ce6fba0c2" class="bulleted-list"><li style="list-style-type:disc">冷えた体で考えた暗い事なんて全部幻よ。</li></ul><ul id="bd3da2fc-ab56-46d3-ae05-546ae462a602" class="bulleted-list"><li style="list-style-type:disc">世界平和のためにぼんやりしてる</li></ul><ul id="acc23d44-9681-43b7-871e-bb2ba6c7563d" class="bulleted-list"><li style="list-style-type:disc">ドカ食い気絶部はもう古い、時代は飢餓覚醒部</li></ul><ul id="22595883-88d3-47eb-a059-d45c89d5b81a" class="bulleted-list"><li style="list-style-type:disc">子育てのゴール：労働市場への引き渡し</li></ul><ul id="f91b5bf2-1b11-490f-b2f7-5ef1fa95b196" class="bulleted-list"><li style="list-style-type:disc">コップの水をごくごく飲んでる時の、目的が&quot;喉を潤す&quot;から&quot;コップを空にする&quot;に変わる瞬間</li></ul><ul id="e4ac1308-6a28-443b-ad05-920983896eaa" class="bulleted-list"><li style="list-style-type:disc">おれという現象は 假定された有機交流電燈の ひとつの青い照明なのかな</li></ul><ul id="4f9aebb0-f935-49af-8504-88ab930eaaea" class="bulleted-list"><li style="list-style-type:disc">一円を笑うものは十円で10回笑える</li></ul><ul id="e70bc235-8f2f-427c-97ed-b957d5e225b2" class="bulleted-list"><li style="list-style-type:disc">机を壊し、ドアを壊し、電柱を壊す</li></ul><ul id="61c14951-57f7-443e-9301-a43af8b09332" class="bulleted-list"><li style="list-style-type:disc">ちょっとパース狂ってるけど世の中も狂ってるしまあいいか</li></ul><ul id="6b84a63c-3260-4e4a-aa74-15e567b7d4ce" class="bulleted-list"><li style="list-style-type:disc">全盛期の野茂のフォークボールみたいな落ち込み</li></ul><ul id="3de67beb-ec39-48d3-980c-21ec168505fd" class="bulleted-list"><li style="list-style-type:disc">アコムでももうちょい厳しいよ！</li></ul><ul id="ff9a26e0-262a-4d75-820e-fd6284bdf3b4" class="bulleted-list"><li style="list-style-type:disc">虎穴に入るのもまたベンガルトラ</li></ul><ul id="068e9397-3d94-46dc-82f6-71cc1f69397e" class="bulleted-list"><li style="list-style-type:disc">クックックッ…お前もこの手で《脱構築 déconstruction 》してやるデリねえ</li></ul><ul id="4c380b37-2a22-47b3-a6f8-fad9db5bf9ba" class="bulleted-list"><li style="list-style-type:disc">鳥貴族行くぞキリト</li></ul><ul id="534d70fe-27c4-49d0-b427-699b786d59b9" class="bulleted-list"><li style="list-style-type:disc">唯物って、一つにすると吻だね。唯と物が接して吻。接吻だね。</li></ul><ul id="abd875f6-a1e4-419f-bdf1-6def1b6976f8" class="bulleted-list"><li style="list-style-type:disc">男の裸がサブスク定額で見放題、皇帝のような暮らしをしている</li></ul><ul id="92d1bbb2-a1d7-4ced-9e65-f0985eb89dfd" class="bulleted-list"><li style="list-style-type:disc">助けて、アー、死ぬ、あたま上げろーパワーなど新作撮り下ろしボイス17種類を収録</li></ul><ul id="e7573167-6d6d-4756-9aed-7b808923ba6a" class="bulleted-list"><li style="list-style-type:disc">一度、精神的に危険なところまで追い詰められた事のある人にとっては、求めるものは心の平静であり、それ以外の事は大して重要ではないという心境になるものだ。<br/>その時点から物事の価値が根本から変わり、世界の色が変わる。<br/></li></ul><ul id="c90d6bd3-7813-4923-a13b-107eda35d4b9" class="bulleted-list"><li style="list-style-type:disc">明らかに時代の流れが変わってきている　これからは肉体の時代　インターネットで加速しすぎた精神に　肉体が　物が　産業構造が　法制度が　追いついてくる時代　調和の時代</li></ul><ul id="16578d26-e446-8027-a6fc-f2b8831935cf" class="bulleted-list"><li style="list-style-type:disc">鬱病とファックしてたら「声……我慢しなくていいよ♡」って言われたから今叫んでる</li></ul><ul id="eaa792d9-f9f4-4bb7-9fa7-70e0e4c34299" class="bulleted-list"><li style="list-style-type:disc">ネットで怒られること火のごとしと俺の中のインターネット風林火山がシグナルを送って来たので断念したことがあった</li></ul><ul id="2cd9bf3e-80c1-4b99-a3a4-36d9770c15a6" class="bulleted-list"><li style="list-style-type:disc">Twitter上で俺より100倍クールな人達が、計算機をいかにクールに動かすかをボランティアで議論している。<br/>俺はクールな人達が作った計算機を買って、クールなOSの上にタダノリし、クールな言語でとんでもなく愚かなコードを書き障害を起こし、給料をもらう。<br/></li></ul><ul id="29133e2f-4c32-482b-bbf1-34824cd3dab5" class="bulleted-list"><li style="list-style-type:disc">働かずに生きたいし、なんなら何もしないで周囲の尊敬と羨望をほしいままにしたい。私が晴れろと言ったら空は晴れるべきだし、私が歌えと言ったら小鳥は歌うべきではないでしょうか？貴様ら凡夫どもが私を万雷の拍手で歓迎し、全財産を惜しみなく貢ぐような世の中になってほしい。たったそれだけのささやかな願いを持つのはそんなに難しいことなのでしょうか？</li></ul><ul id="05c6d0b7-fc03-41d5-ad14-c9e17440fcfc" class="bulleted-list"><li style="list-style-type:disc">高校の頃、英語の先生（クリスチャン）が「four-letter wordというあまり口に出すべきでない四文字の単語を表す言い回しがあります。〇〇くん、わかりますか？」って言い出したんですけど、当てられた〇〇くんが「YHVHですか？」って答えたあの瞬間、今思い出しても極上のヒリつき体験で最高だったな…</li></ul><ul id="6e569881-8163-4e42-9003-7e3d7e099117" class="bulleted-list"><li style="list-style-type:disc">お前らなんで生きてんの？って問いに答えられないだろ？じゃあ一旦この6発のうち1発が実弾のリボルバーがここにあるから、これを頭に当てて引き金引いてみ。多分ハズレを引いたならその答えがわかると思うよ。だからハズレ引いてみて</li></ul><ul id="aab9fd46-8618-44b6-83a4-f3e042c07ab4" class="bulleted-list"><li style="list-style-type:disc">ラテン語のフレーズ&quot;Amantes amentes&quot;「恋する人は正気でない人」は、一文字違いのシャレになっています。元はテレンティウスの劇にある&quot;inceptiost amentium haud amantium&quot;「彼らの企ては恋する人のではなく、狂った人の企てである」だと考えられています。</li></ul><ul id="497ceba3-b71c-4ddc-87fe-b2847d3f2d2c" class="bulleted-list"><li style="list-style-type:disc">立てば芍薬 座れば牡丹 喋る姿は見てられへん 口取ったほうがええでホンマよう次から次へとそんなしょーもないこと言えるわ恥ずかしい お母ちゃんも泣いてはるで ええもん食わしてええ服着せて、蝶よ花よ言うてたんが今や見てみい 遠い昔や 落ち着きのないボンクラ 箸が転ぶ前から笑うとる 大体な</li></ul><ul id="ace46fb8-ffd4-4a1a-bf08-dcd08c71fc29" class="bulleted-list"><li style="list-style-type:disc">ういうのを作るのは初めてなので玩具屋の店員に勝手をたずねたら、セメントで付けろなどと頓狂を言われてしまってね。頓狂なら君の十八番だろうと教えを乞う次第なのだ</li></ul><ul id="0c62f2ab-8401-4ba8-9172-27b65877e7fa" class="bulleted-list"><li style="list-style-type:disc">揚げ物バイト時代、自分のことを揚げ物の国アゲモニアの次期皇女だと思っていて、即位までに国民や世界に恥じないフライヤー（揚げ者）になれるよう日々揚げに励んでいるという設定でなんとか耐えていた</li></ul><ul id="5892e749-f6f2-4664-a20d-8dbd01035aaf" class="bulleted-list"><li style="list-style-type:disc">おにぎりを作り、ベランダから捨てる</li></ul><ul id="c98f72eb-3d0a-4233-9e42-00ed58d33c33" class="bulleted-list"><li style="list-style-type:disc">おばあちゃんに車輪を付けたら自転車</li></ul><ul id="955b7b0d-0bb3-4a96-b348-aa641d44ae2c" class="bulleted-list"><li style="list-style-type:disc">ウィトゲンシュタインの妹です<br/>語り得ぬものについて語ります<br/></li></ul><ul id="17378d26-e446-80ef-ae7b-da1c2153d2ca" class="bulleted-list"><li style="list-style-type:disc">酒が人をダメにするのではなく、警察が犯人を逮捕する</li></ul><ul id="d9df97b9-7409-4cba-b29e-77ec014112e8" class="bulleted-list"><li style="list-style-type:disc">夏終わる頃どうなってるんだろうね全て</li></ul><ul id="11f78d26-e446-80c6-bb69-e42e29c2003e" class="bulleted-list"><li style="list-style-type:disc">IKKOこと豊田一幸は2017年10月24日～10月28日の間に全くの他人と入れ替わっている</li></ul><ul id="7a3e28b9-0dec-4586-9ba1-b5020e873e36" class="bulleted-list"><li style="list-style-type:disc">年賀状の味を覚えたヤギがもうすぐ山を下って郵便局を襲う</li></ul><ul id="3b143b8f-6ff7-43f9-bbe8-29f2755657cc" class="bulleted-list"><li style="list-style-type:disc">してるしてる、こう言っちゃなんだけど反省しかしてないからねさっきから</li></ul><ul id="643fc2de-b28e-4f33-beba-dba7ad6e98fa" class="bulleted-list"><li style="list-style-type:disc">オタクが引用リツイートで「もう少しこうなんというか…手心というか…」の画像を貼るたびに暗い冷たい森の奥で悲しそうに鳴く、本当に美しい一匹の鳥</li></ul><ul id="f27f02f9-1722-4c61-9722-4816f4ea4b3f" class="bulleted-list"><li style="list-style-type:disc">マックで「もう戦車なんかいらないよね」と話してたら、後ろのJKたちが毅然と立ち上がり、ブーツを鳴らし、Panzerlied歌い出した</li></ul><ul id="8a03616f-97fd-42fb-bf8d-cf5db7db97c0" class="bulleted-list"><li style="list-style-type:disc">弾丸プリウスが、徘徊老人を轢き殺す</li></ul><ul id="167b7528-6f7e-4e80-884a-31f9ad48d9b2" class="bulleted-list"><li style="list-style-type:disc">脳が最もみだらな臓器なのはご存知でしょう？</li></ul><ul id="17b78d26-e446-800e-a3cd-f23a6e6970d4" class="bulleted-list"><li style="list-style-type:disc">四畳半神話大系、半分くらいまで来たけど読むのやめた<br/>このまま左翼的、アンチ資本主義、文化人ヅラ、怠惰自慢、鴨川芸に染まってしまうのはよくない<br/></li></ul><ul id="038767f2-248d-4566-a156-1e5cc0fa9def" class="bulleted-list"><li style="list-style-type:disc">天の川銀河の中心ってラム酒の香りがするんですよ</li></ul><ul id="55201099-b039-4141-af44-8289ca27ed54" class="bulleted-list"><li style="list-style-type:disc">冷笑者に憧れて、冷笑者の型に沿って冷笑するけど、別にほんとうに冷笑したいわけではないので「気持ち」がこもっておらずちゃんとした冷笑になってないという、最悪の冷笑ワナビを見かけるようになった。冷笑するにもやはりコイツを冷笑したいという情熱が必要なのである</li></ul><ul id="84e8d107-449a-4285-9071-84ce7c54df17" class="bulleted-list"><li style="list-style-type:disc">5thディメンション「AQUARIUS」月が第7ハウスに入る時、木星と火星は直列する。平和が星を支配し、愛が星を導く。水瓶座の時代。愛と平和の時代の始まり。調和、理解、共感、信頼が満ち溢れる。神秘的な啓示と魂の解放。</li></ul><ul id="52c05015-84c3-4a97-8658-dbe8c2ee4ec6" class="bulleted-list"><li style="list-style-type:disc">残念ながら、誠実と魂の時代は始まっておらず、今は冷笑と露悪の時代です<br/>その事実をまず受け止めた上で次のステップを考える必要があるでしょう<br/></li></ul><ul id="884c7c7e-16ce-46c2-bf52-6133f654f207" class="bulleted-list"><li style="list-style-type:disc">墓地が無料！急いで死ね！</li></ul><ul id="26a7ca1b-faa2-41f8-bf2a-e770165c361c" class="bulleted-list"><li style="list-style-type:disc">潤滑油なし、保護なし、一晩中、一日中、キッチンの床から便座まで、ダイニングテーブルから寝室まで、バスルームのシンクからシャワーまで、玄関ポーチからバルコニーまで、垂直、水平、二次、指数関数的、対数関数的、空気を求めて息を切らしながら叫んで光を見る、正常位、騎乗位、リバースカウガー</li></ul><ul id="829e9829-a63a-4235-ba29-763d951e882a" class="bulleted-list"><li style="list-style-type:disc">私の友人はこの店に行って、自己破産し、今では言葉を話すこともできません。</li></ul><ul id="ca8bc05a-5bc6-4632-9a89-77e84fc50ee0" class="bulleted-list"><li style="list-style-type:disc">神の国マジです。人の子らが犯す罪『&quot;全て&quot;赦されます』。どんな冒涜の言葉も無料で赦免。聖霊の冒涜は永遠に懲罰。罪人も、タダで招かれる。0円でできる善行まとめはリプ欄に貼りました</li></ul><ul id="11b78d26-e446-80e0-98cc-c25fdc96cf3e" class="bulleted-list"><li style="list-style-type:disc">ソ連の加盟国が0カ国ということは、国民はレーニンということである。</li></ul><ul id="14b78d26-e446-801e-a429-ea1c325f5f60" class="bulleted-list"><li style="list-style-type:disc">ハハハ<br/>みんな「うつ病手コキ」って知ってるかな<br/>その名の通りうつ病の人間がおのれの陰茎を手コキするんだけど<br/>うつ病だからちんちんがなかなか勃たないんだ<br/>それでもうつ病手コキマンはすがるように、祈るようにちんちんを手コキし続けるんだ<br/>生きる　ってそういった性質のものかもしれないね<br/>ハハハ<br/></li></ul><ul id="14b78d26-e446-8088-87af-ce5918d83771" class="bulleted-list"><li style="list-style-type:disc">あまりにひさびさすぎて狐や狸が右往左往し、狼は狩りに失敗し、虎や熊が困惑の唸りをあげ、小鳥たちは一斉に飛び立った</li></ul><ul id="14b78d26-e446-8084-872c-e3ce8dbbd44a" class="bulleted-list"><li style="list-style-type:disc">私は天国に行きたくありません、そこには私の友達が一人もいないからです。</li></ul><ul id="14b78d26-e446-807d-9af0-e6755abc3b56" class="bulleted-list"><li style="list-style-type:disc">光の時代が到来するという噂を耳にし、そこからバババッと推論がいろいろと飛んで、結論としては、今後、栃木県が重要になるだろうという考えに至った</li></ul><ul id="14b78d26-e446-80dd-b141-caf243feb4b9" class="bulleted-list"><li style="list-style-type:disc">ちくわの単純所持</li></ul><ul id="14b78d26-e446-8080-b118-c93ee2bea943" class="bulleted-list"><li style="list-style-type:disc">研究室に進捗がないメンバーがいるね。経験値に変えちゃおう！<br/>“合成”をタップしてみて！<br/></li></ul><ul id="15778d26-e446-8008-96f4-c04d32fd5f57" class="bulleted-list"><li style="list-style-type:disc">虚妄のヴィジョンだと思います。 イルミナティは、虚妄のヴィジョンを人々に行き渡らせて、何とか支配しようとしているのだと思います。 いずれ、666のけものがこの世界に上がってきたら、話は別かもしれませんが。</li></ul><ul id="16478d26-e446-803f-ace3-c5a76bf310c4" class="bulleted-list"><li style="list-style-type:disc">ぷろぐらみんぐ？中に思っていること・ンー<p id="16478d26-e446-80bd-8e51-f97f27ccca20" class="">・ごめんなさいにゃ…</p><p id="16478d26-e446-8090-9572-d038aa5f13e1" class="">・くるち♡くるち♡</p><p id="16478d26-e446-8050-ac91-e9db768dca3d" class="">・まいぐれーしょん、されちゃってます</p><p id="16478d26-e446-8092-b98e-fd9dd402c5cc" class="">・こんぱいるできないー</p><p id="16478d26-e446-8044-9a46-e95441c8a8f1" class="">・お前いま[object Object]って言ったか？</p></li></ul><ul id="14b78d26-e446-807c-9297-d732357cdc6a" class="bulleted-list"><li style="list-style-type:disc">モテる女のさ・し・す・せ・そ！<p id="14b78d26-e446-8030-b36e-dcd174b29f8f" class="">さ　咲いた花なら散るのは覚悟<br/>し　神州不滅！大政翼賛、聖戦完遂<br/>す　進め一億火の玉だ！<br/>せ　センスあるね〜<br/>そ　尊皇討奸、昭和維新！<br/></p></li></ul><ul id="14b78d26-e446-8033-b704-efb5cc3ba9f0" class="bulleted-list"><li style="list-style-type:disc">週間『ポーランド・リトアニア共和国をつくる』<br/>毎号ついてくる義勇兵を集めて東欧の大国を作り直そう<br/>創刊号は何もついてこなくて1795円<br/></li></ul><ul id="14b78d26-e446-80a3-81e3-ecf887cc64a7" class="bulleted-list"><li style="list-style-type:disc">IKKOこと豊田一幸は2017年10月24日～10月28日の間に全くの他人と入れ替わっている</li></ul><ul id="14b78d26-e446-80ba-9e7e-e6c0e24ebd41" class="bulleted-list"><li style="list-style-type:disc">寝ないとナイト<br/>それは眠れぬ夜にそっと寄り添う、あなただけの聖なる騎士<br/></li></ul><ul id="14c78d26-e446-800d-b6d2-e293cc6bc164" class="bulleted-list"><li style="list-style-type:disc">「ブタは病気になったとき川へカニを捕りに行く」「コウノトリは屋根の上で雛たちに飛翔の指導をする」</li></ul><ul id="14c78d26-e446-800e-8d8c-cffde1d3c770" class="bulleted-list"><li style="list-style-type:disc">あまりの衝撃に陸と海がひっくり返った　みなさんは明日からわかめの上などを歩いて通勤してください</li></ul><ul id="14c78d26-e446-8084-98f9-c67b24d4fa9b" class="bulleted-list"><li style="list-style-type:disc">先生、俺海が見たいんすよ<br/>人を、愛したいんすよ<br/></li></ul><ul id="14c78d26-e446-80d2-a2f1-fea9db8c4b35" class="bulleted-list"><li style="list-style-type:disc">昨日、先輩が研究室に、福砂屋の立派なカステラを差し入れして下さったんですね。文明堂ではなく福砂屋という時点で我々は大喜びなのですが、いかんせんその日は講義もなく、部屋に院生は三人しかいない。とても三人では食べきれないし、食べてしまうのも勿体ない。なにせ福砂屋です。</li></ul><ul id="14e78d26-e446-801b-b650-d69775206136" class="bulleted-list"><li style="list-style-type:disc">死にたい死にたい死にたい死にたい死にたい死にたい  にたにたすんな／ナイス害</li></ul><ul id="15078d26-e446-803e-a524-cc77696f94f7" class="bulleted-list"><li style="list-style-type:disc">猿の二足歩行凄すぎる！進化論信じてなかったけど考え改めるレベル</li></ul><ul id="15278d26-e446-80df-bf33-f8b515dd1f0a" class="bulleted-list"><li style="list-style-type:disc">２０００年前後のエロゲとかさ<br/>大槻ケンヂの小説とかさ<br/>新世紀エヴァンゲリオンとかさ<br/>最終兵器彼女とかさ<br/>酒鬼薔薇事件とかさ<br/>そういうものを全部読み返して<br/>当時の空気感を思い出して<br/>自分があの頃何が欲しくて<br/>今は何してんのかとか<br/>そういうの全部考えてさ<br/>終わらない涙を枯れるまで流してさ<br/>鏡を見たらやっぱり全裸の中年男性が映っててさ<br/>奇声をあげて否定しようとしたけど<br/>漏れ出る声　嗚咽は全てを全力で肯定しててさ<br/>また更に狂ってしまってさ<br/>人間の精神ってコインとは違ってさ<br/>裏の状態から更に裏返しても<br/>別に表にはならなくてさ<br/>時間も１９９９年には戻らなくてさ<br/>２０２４年の完全発狂中年男性がそこにいるわけ<br/>ハハ<br/>まいっちゃうよな<br/>シンジ君やちせちゃんはどう思う？？？？？<br/>ハハハ<br/>おい<br/>なんか答えろよ<br/>俺はさ<br/>真剣に聞いてンだよ・・・・・・・・・・・・・・<br/></li></ul><p id="15278d26-e446-802f-8bc3-de4c715d5aed" class="">完</p><ul id="15278d26-e446-802a-8ac0-f414c0f945a5" class="bulleted-list"><li style="list-style-type:disc">経済学者の松尾匡さんいわく、左翼は世界を上下に分けて、下に味方する。右翼は世界を内外に分けて、内に味方する、ということだ。</li></ul><ul id="16a78d26-e446-805e-a123-d28ce66f2660" class="bulleted-list"><li style="list-style-type:disc">これからの日本人は結婚せず子供も持たず、一人で金もなく中高年に突入する。そうすれば鬱になる。そこで現れるオアシスがX。陰謀論を叫び、政治に吠え、炎上した人を叩いていいねというお薬をもらう。Xはもう心療内科</li></ul><ul id="18e78d26-e446-804e-9c4d-ecf9134b81df" class="bulleted-list"><li style="list-style-type:disc">DCなのに4年もあって1本も論文を出せませんでした。大変申し訳ありませんでした。いまリバイスしてるやつも大したことない駄論文なので上司に真剣に見てもらえませんでした。結構寝る間も惜しんで限りないハラスメントに耐えて実験頑張ったんですが、ダメでした。今後研究を続けるかわかりません。</li></ul><ul id="18e78d26-e446-8028-9b48-e09b60f5127f" class="bulleted-list"><li style="list-style-type:disc">カーネルはわかりカーネル</li></ul><ul id="19078d26-e446-8094-b75e-dfed35368c4d" class="bulleted-list"><li style="list-style-type:disc">僕ヤバを読み、死にました。享年41。船外作業（EVA）中に青春の隕石（秒速40km以上）と衝突し、全身を強く打って間も無く死亡が確認されました。葬儀は宇宙密葬の形で行い、後日お別れの会を設ける予定。</li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">その他</summary><div class="indented"><ul id="771e1143-af52-4738-af55-ad6a6a7a2c37" class="bulleted-list"><li style="list-style-type:disc">いんげんの味噌汁が好き</li></ul><ul id="20e5eac8-b975-44fa-88de-b96afd90c507" class="bulleted-list"><li style="list-style-type:disc">雨の日の濡れた髪の匂いが好き</li></ul><ul id="63bd5a4a-8a09-4ffc-9349-b96720c653b9" class="bulleted-list"><li style="list-style-type:disc">高校時代の同級生、私を偏執的に愛する人、母親、それらの非倫理的行い、日常、甘美</li></ul><ul id="a852d9dc-88a8-4f1b-acb2-14f71b9b9cca" class="bulleted-list"><li style="list-style-type:disc">授業で高草木花野さんという人がいていい名前だと思ってしまった</li></ul><ul id="39a14742-8b0d-495c-870e-a04ead9df804" class="bulleted-list"><li style="list-style-type:disc">断面がオレンジの女の子に生まれたかった</li></ul><ul id="6a4a9941-c523-4d11-a9c2-41354b334cc9" class="bulleted-list"><li style="list-style-type:disc">考えたネタ</li></ul><ul id="14678d26-e446-80ea-b968-dcb267627c50" class="bulleted-list"><li style="list-style-type:disc">失敗すれば反逆、成功すれば革命</li></ul><ul id="c3919661-9f13-4a48-b568-2ff2cac6e553" class="bulleted-list"><li style="list-style-type:disc">恨み謗る、裏味噌汁</li></ul><ul id="16478d26-e446-80ba-9c03-c3e1226790ca" class="bulleted-list"><li style="list-style-type:disc">ベーシックインカムをもらって遊んで暮らす、これは豚と同じです</li></ul><ul id="c99937a7-edf8-4708-848b-f96096e50709" class="bulleted-list"><li style="list-style-type:disc">売れているものが良いものなら、世界一のボカロ曲はNyan Catだよ。</li></ul><ul id="12878d26-e446-80eb-b451-f60bd29f8aa7" class="bulleted-list"><li style="list-style-type:disc">7つの国境, 6つの共和国, 5つの民族, 4つの言語, 3つの宗教, 2つの文字, 1つの国家</li></ul><ul id="887954d5-78a0-4992-8f6e-849f5789e3f9" class="bulleted-list"><li style="list-style-type:disc">クリープを入れないコーヒーなんて...</li></ul><ul id="c0152b14-ee4a-4404-b351-8c26dffa2acc" class="bulleted-list"><li style="list-style-type:disc">馬鹿に冗談が勢揃い</li></ul><ul id="3955d2ea-9f68-49fc-8771-04c5cb961be8" class="bulleted-list"><li style="list-style-type:disc">肝があるのか、頭がないのか</li></ul><ul id="ba163ef8-e2c2-4717-9483-ac67752caa18" class="bulleted-list"><li style="list-style-type:disc">三尺三寸、一命取るぞ</li></ul><ul id="17d78d26-e446-80cf-b628-de43c8d36ce0" class="bulleted-list"><li style="list-style-type:disc">どうして九両三分二朱</li></ul><ul id="b7a3b306-2301-46f5-94b7-7c66e5f51392" class="bulleted-list"><li style="list-style-type:disc">ソシュールのソ抜き</li></ul><ul id="832add9d-d6c1-48b0-a530-ae20ae219301" class="bulleted-list"><li style="list-style-type:disc">栗よりうまい十三里</li></ul><ul id="f5d3cba1-e932-4f60-8f8d-ccec22d2126c" class="bulleted-list"><li style="list-style-type:disc">連帯、反戦 示せ今</li></ul><ul id="9253a211-b2b8-41d0-9b99-4d1698b1f078" class="bulleted-list"><li style="list-style-type:disc">庶民の値段で貴族の享受</li></ul><ul id="39cd2235-7301-490d-8e07-4072c6b29402" class="bulleted-list"><li style="list-style-type:disc">一か八かではなく1か0か</li></ul><ul id="ef2baa88-31c9-44ec-9024-2eedf72e9e3a" class="bulleted-list"><li style="list-style-type:disc">メシアが来たりて笛を吹く</li></ul><ul id="373cff0d-3880-4645-8971-60d3c5db2420" class="bulleted-list"><li style="list-style-type:disc">勝負に賭けるものは心に枷を作ってはいけない</li></ul><ul id="6116d7f5-91d4-44d1-8794-e44c1d15b2d2" class="bulleted-list"><li style="list-style-type:disc">恋愛を前にした時のただひとつの勇気は、逃げることである。『ナポレオン・ボナパルト』</li></ul><ul id="2c0b9229-0229-470b-be16-244a98eb16de" class="bulleted-list"><li style="list-style-type:disc">これは、冷凍都市を駆け抜けた、彼らの軋轢と焦燥と妄想の記録である</li></ul><ul id="53b7c96c-4d95-434d-9552-02fb618d5738" class="bulleted-list"><li style="list-style-type:disc">博士号とかけまして，足裏の米とときます．そのこころは「取っても食えないが取らないと気持ち悪い」</li></ul><ul id="fd82b0e0-7647-49e7-906e-e0959afdbc4c" class="bulleted-list"><li style="list-style-type:disc">「殺しのオリンピックがあれば、俺は金メダル間違いなしだ。殺しのオリンピックは本物のオリンピックよりずっと面白い」「そのうち、俺は殺しの世界で一番の男になりたいと思うようになった。人間なんでも一番にならなきゃ駄目だ。殺しにかけては俺がいまナンバーワン」</li></ul><ul id="bf24d294-7482-401c-a7e1-7b95b0303c21" class="bulleted-list"><li style="list-style-type:disc">資本主義は崖っぷちだけど共産主義はその一歩先を行ってる</li></ul><ul id="d1627418-43d8-49b6-9528-04a5a5a11c17" class="bulleted-list"><li style="list-style-type:disc">社会学は近代とは何かを問う学問</li></ul><ul id="6e818b61-9785-4c4b-8b70-384a9c4e0f03" class="bulleted-list"><li style="list-style-type:disc">自分では自由で自立しているつもりの人間精神を、あらかじめ規定し限界づけている形式へのこだわり</li></ul><ul id="7dce2a88-60cc-40a3-9b31-59b7bc05e73b" class="bulleted-list"><li style="list-style-type:disc">自分に自信が持てて、自分の未来が明るいと信じられる以上に、幸福なことはないのだ。</li></ul><ul id="35a88687-47fb-46ee-bbad-576ea75aeb11" class="bulleted-list"><li style="list-style-type:disc">好きな人を助けるのは当たり前。クズ以下のなにかじゃないことを証明したくて嫌いな相手でも助ける</li></ul><ul id="a8f674ac-6a5d-4b47-b838-62e5df6fa6d5" class="bulleted-list"><li style="list-style-type:disc">切れろ、別れろは芸者のときにいう言葉</li></ul><ul id="77212feb-c8a1-478e-93bd-8095e41362ea" class="bulleted-list"><li style="list-style-type:disc">永遠なものが自分に対して形成されてゆく</li></ul><ul id="47dd15ee-1c82-4ef4-a36d-ca91c4400b1d" class="bulleted-list"><li style="list-style-type:disc">自己にまつわる決定権の全てを自分の信奉する他人にすっかり委ねてしまいたい</li></ul><ul id="fc47d195-a6f5-4b7e-8c46-7d2794a614a7" class="bulleted-list"><li style="list-style-type:disc">精神なき専門人、心情なき享楽人</li></ul><ul id="3bb40829-a016-4f23-bf96-e85d8e697ee0" class="bulleted-list"><li style="list-style-type:disc"><strong>「精神なき専門人」＝営利を追及しても不正を思いとどまる倫理観を持たない経営者、あるいは「心情なき享楽人」＝天職のために一生懸命やるみたいな気持ちを持たない労働者</strong></li></ul><ul id="2c264bed-52f7-49cf-bb71-191b847fe9c4" class="bulleted-list"><li style="list-style-type:disc">恐怖で死ぬように出来ていたかった</li></ul><ul id="3ffdac8d-59db-4e24-b2a6-0847e149dd12" class="bulleted-list"><li style="list-style-type:disc">夕焼けから闇に変わる瞬間に、あの世に身をすべらすのだ。</li></ul><ul id="d1f8ffa5-c602-4025-856a-88e3c6a2ba6a" class="bulleted-list"><li style="list-style-type:disc">この心地よさの絶えぬうちに、現から夢へとみをすべらす。</li></ul><ul id="eee3cb7e-0d08-4bf1-ae3c-caf08b328ce1" class="bulleted-list"><li style="list-style-type:disc">よりよい自己実現を目指すために自分の全存在をかけて実存する自分の人生全てと闘う</li></ul><ul id="750c573c-1675-4460-ae7b-3335e143c2f7" class="bulleted-list"><li style="list-style-type:disc">死という選択肢が、何よりも眩しく、色付いて見えた</li></ul><ul id="f9665f95-917e-4e97-9580-ee7d138d463d" class="bulleted-list"><li style="list-style-type:disc">巧い裁断の一着の洋服や、自動車のハンドルが与えてくれるあの素晴らしい自信</li></ul><ul id="1e13a617-7a65-4108-a5ef-d0a35de20bc8" class="bulleted-list"><li style="list-style-type:disc">ここは厳しい街です。どんなに楽しい一日を過ごしても、それが一瞬の夢に終わってしまうこともある。</li></ul><ul id="7924c6e1-ac0c-4ba8-b040-b28e2dae1258" class="bulleted-list"><li style="list-style-type:disc">やってみて 言って聞かせて させてみて ほめてやらねば 人は動かじ</li></ul><ul id="115a3070-f60f-4742-bf6a-0e36cdbcd1a3" class="bulleted-list"><li style="list-style-type:disc">臆病者は何度も死ぬが、勇者は一度のみ シーザー</li></ul><ul id="7dd56dbb-dd2b-4add-9a45-fb673ad543ea" class="bulleted-list"><li style="list-style-type:disc">君たちはステージが低い 君たちと話していると君たちのカルマが私の中に入ってきて私が苦しくなる</li></ul><ul id="00b7a046-a726-4da1-b40e-3aedafa593bc" class="bulleted-list"><li style="list-style-type:disc">Q. 言語・真理・論理について考えるときのかけ声は？<br/>A. エイヤー！！<br/></li></ul><ul id="11578d26-e446-809d-941b-e2205c289c1f" class="bulleted-list"><li style="list-style-type:disc">とうもろこしのエアコン、エアコーン</li></ul><ul id="11578d26-e446-80df-ad2d-dd28db1b92bb" class="bulleted-list"><li style="list-style-type:disc">カニのにわか、カニわか<br/>にわかのカニ、にわか二<br/></li></ul></div></details><p id="74604107-a248-4d25-bec9-62c328b866e0" class="">
+
+
+
+</body></html>
